@@ -13,13 +13,19 @@
 */
 
 const average = (array) => {
+  if (array.length === 0) {
+    return undefined;
+  }
   let sum = 0;
-  let len = array.length
-  for (let i = 1; i <= len; i ++){
+  for (let i = 0; i < array.length; i += 1) {
+    if (typeof array[i] !== 'number') {
+      return undefined;
+    }
     sum += array[i];
   }
-  return (sum / array.length);
-}
+  let avg = sum / array.length;
+  avg = Number(avg.toFixed(0));
+  return avg;
+};
 
-
-module.exports = average
+module.exports = average;
