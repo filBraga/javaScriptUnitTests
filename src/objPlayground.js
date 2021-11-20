@@ -36,18 +36,17 @@
 const calculator = (number1, number2) => {
   const sum = number1 + number2;
   const mult = number1 * number2;
-  let div = (number1 / number2);
-  div = Math.floor(div);
+  const div = Math.floor(number1 / number2);
   const sub = number1 - number2;
-  const obj = {};
-  obj.sum = sum;
-  obj.mult = mult;
-  obj.div = div;
-  obj.sub = sub;
-  return obj;
+  const object = {
+  sum,
+  mult,
+  div,
+  sub,
+  };
+  
+  return object;
 };
-
-
 
 const arrayGenerator = (type, object) => {
   if (type === 'keys') {
