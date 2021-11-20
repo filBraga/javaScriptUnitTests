@@ -42,7 +42,6 @@ describe('6 - Implemente os casos de teste para a função `productDetails`', ()
     const objectInside = productDetails('a','b');
     expect(typeof objectInside[0]).toBe('object');
     expect(typeof objectInside[1]).toBe('object');
-
     // Teste se quando passado parâmetros diferentes entre si, os dois objetos também são diferentes entre si.
     expect(objectInside[0]).not.toBe(objectInside[1])
     // Teste se os dois productIds terminam com 123.
